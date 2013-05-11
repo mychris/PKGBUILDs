@@ -1,0 +1,14 @@
+diff -Naur src/tpacpi-bat/tpacpi.service src1/tpacpi-bat/tpacpi.service
+--- src/tpacpi-bat/tpacpi.service	2013-05-11 20:08:16.869294061 +0200
++++ src1/tpacpi-bat/tpacpi.service	2013-05-11 20:17:43.422614881 +0200
+@@ -3,8 +3,8 @@
+ 
+ [Service]
+ Type=oneshot
+-ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat startChargeThreshold 0 40
+-ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat stopChargeThreshold 0 80
++ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat -s ST 0 70
++ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat -s SP 0 85
+ 
+ [Install]
+ WantedBy=multi-user.target
