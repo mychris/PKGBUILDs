@@ -1,6 +1,6 @@
-diff -Naur src/tpacpi-bat/tpacpi.service src1/tpacpi-bat/tpacpi.service
---- src/tpacpi-bat/tpacpi.service	2013-05-11 20:08:16.869294061 +0200
-+++ src1/tpacpi-bat/tpacpi.service	2013-05-11 20:17:43.422614881 +0200
+fix the systemd call and set thresholds
+--- src/tpacpi-bat/tpacpi.service
++++ src/tpacpi-bat/tpacpi.service
 @@ -3,8 +3,8 @@
  
  [Service]

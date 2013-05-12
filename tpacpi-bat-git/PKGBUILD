@@ -2,7 +2,7 @@
 
 pkgname=tpacpi-bat-git
 _pkgname="${pkgname%-*}"
-pkgver=45.0a8891d
+pkgver=
 pkgrel=1
 pkgdesc="A Perl script with ACPI calls for recent ThinkPads (such as T420 and W520) whose battery thresholds are not supported by tp_smapi"
 url="https://github.com/teleshoes/tpacpi-bat"
@@ -13,13 +13,12 @@ makedepends=("git")
 conflicts=("${_pkgname}")
 provides=("${_pkgname}")
 source=("git://github.com/teleshoes/tpacpi-bat.git" "systemd-service.patch")
-md5sums=("SKIP" "SKIP")
+md5sums=('SKIP'
+         '8fdd3175d4226264ce14b313d6bea13e')
 
 pkgver() {
   cd "${_pkgname}"
-  #git describe --always | sed "s|^${_pkgname}-||g;s|-|.|g"
   echo $(git rev-list --count master).$(git rev-parse --short master)
-  #date +%Y%m%d
 }
 
 prepare() {
@@ -32,3 +31,4 @@ package() {
   install -Dm322 "${_pkgname}"            "${pkgdir}/usr/lib/perl5/vendor_perl/${_pkgname}"
   install -Dm644 "${_pkgname%-*}.service" "${pkgdir}/usr/lib/systemd/system/${_pkgname}.service"
 }
+
