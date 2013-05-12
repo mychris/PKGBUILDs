@@ -1,0 +1,4 @@
+pkg/*
+src/*
+tpacpi-bat/*
+*pkg.tar.xz
