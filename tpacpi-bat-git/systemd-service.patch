@@ -7,8 +7,8 @@ fix the systemd call and set thresholds
  Type=oneshot
 -ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat startChargeThreshold 0 40
 -ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat stopChargeThreshold 0 80
-+ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat -s ST 0 70
-+ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat -s SP 0 85
++ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat -s ST 0 80
++ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat -s SP 0 90
  
  [Install]
  WantedBy=multi-user.target
