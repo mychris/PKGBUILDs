@@ -1,0 +1,4 @@
+pkg/*
+src/*
+goncurses/*
+*pkg.tar.xz
