@@ -5,10 +5,10 @@ fix the systemd call and set thresholds
  
  [Service]
  Type=oneshot
--ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat startChargeThreshold 0 40
--ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat stopChargeThreshold 0 80
-+ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat -s ST 0 80
-+ExecStart=/usr/bin/perl /usr/lib/perl5/vendor_perl/tpacpi-bat -s SP 0 90
+-ExecStart=/usr/bin/tpacpi-bat -s ST 0 40
+-ExecStart=/usr/bin/tpacpi-bat -s SP 0 80
++ExecStart=/usr/bin/tpacpi-bat -s ST 0 80
++ExecStart=/usr/bin/tpacpi-bat -s SP 0 90
  
  [Install]
  WantedBy=multi-user.target
