@@ -14,7 +14,7 @@ conflicts=("${_pkgname}")
 provides=("${_pkgname}")
 source=("git://github.com/teleshoes/tpacpi-bat.git" "systemd-service.patch")
 md5sums=('SKIP'
-         'b5581ec19ef1b9afe6037f8305277f7a')
+         '612031e7ca7bc8da0ac431aef64e7798')
 
 pkgver() {
   cd "${_pkgname}"
