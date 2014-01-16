@@ -3,7 +3,7 @@ Description=Automatically fade screen when idle
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/brightd -vx
+ExecStart=/usr/bin/brightd -vx -w 180
 Restart=on-abort
 
 [Install]
