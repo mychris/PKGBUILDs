@@ -1,0 +1,6 @@
+pkg/*
+src/*
+brightd/*
+*pkg.tar.xz
+*tar.bz2
+*tar.gz
