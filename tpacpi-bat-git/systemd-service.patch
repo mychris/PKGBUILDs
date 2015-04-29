@@ -1,6 +1,6 @@
 fix the systemd call and set thresholds
---- a/tpacpi.service
-+++ b/tpacpi.service
+--- src/tpacpi-bat/tpacpi.service
++++ src/tpacpi-bat/tpacpi.service
 @@ -4,8 +4,8 @@ Description=sets battery thresholds
  [Service]
  Type=oneshot
